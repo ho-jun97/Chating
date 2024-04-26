@@ -1,6 +1,7 @@
 package com.chat.chating.controller;
 
 import com.chat.chating.dto.LoginDto;
+import com.chat.chating.dto.UserDto;
 import com.chat.chating.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -15,8 +16,8 @@ public class AuthController {
 
     private final AuthService authService;
     @PostMapping("/login")
-    public @ResponseBody ResponseEntity<String> login(@RequestBody LoginDto loginDto) {
-        authService.login(loginDto);
-        return ResponseEntity.ok("로그인이 되셨습니다.");
+    public @ResponseBody ResponseEntity<UserDto> login(@RequestBody LoginDto loginDto) {
+        return ResponseEntity.ok(authService.login(loginDto));
     }
+
 }
