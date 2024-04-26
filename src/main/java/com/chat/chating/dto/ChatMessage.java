@@ -1,6 +1,9 @@
 package com.chat.chating.dto;
 
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -9,8 +12,12 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 public class ChatMessage {
+    private Long userId;
     private Long roomId;
     private String sender;
     private String senderEmail;
     private String message;
+
+    @DateTimeFormat(pattern = "HH:mm")
+    private LocalDateTime time;
 }
