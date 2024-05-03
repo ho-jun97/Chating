@@ -18,6 +18,6 @@ public class ChatMessage {
     private String senderEmail;
     private String message;
 
-    @DateTimeFormat(pattern = "HH:mm")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime time;
 }
