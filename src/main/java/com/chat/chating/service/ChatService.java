@@ -1,6 +1,5 @@
 package com.chat.chating.service;
 
-import com.chat.chating.dto.ChatMessageDto;
 import com.chat.chating.entity.Chat;
 import com.chat.chating.entity.ChatRoom;
 import com.chat.chating.repository.ChatRepository;
